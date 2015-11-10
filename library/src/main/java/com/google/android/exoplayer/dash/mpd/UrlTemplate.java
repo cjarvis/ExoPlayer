@@ -150,6 +150,9 @@ public final class UrlTemplate {
             identifiers[identifierCount] = BANDWIDTH_ID;
           } else if (identifier.equals(TIME)) {
             identifiers[identifierCount] = TIME_ID;
+          } else if (identifier.startsWith(NUMBER)) {
+            identifiers[identifierCount] = NUMBER_ID;
+            formatTag = "%08d";
           } else {
             throw new IllegalArgumentException("Invalid template: " + template);
           }
